@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: linear-gradient(45deg, #ff9249, #fffeff);
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calculator{
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(243, 176, 176);
+    background-color: #fffeff;
+    #display{
+        color: #29201b;
+        margin:0 10px;
+        height: 120px;
+        width: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+    #equal{
+        height: 130px;
+
+    }
+    #clear{
+        background-color: #f8b78c;
+        color: #ff9249;
+    }
+    .btn-number{
+        background-color: aqua;
+        color: #000000;
+    }
+    .btn-operador{
+        background-color: #ff9249;
+        color: #fff;
+    }
+    .btn-equal{
+        background-color: #29201b;
+        color: #fff;
+    }
+    
+    // tema dark
+    &.dark{
+        
+        background-color: #29201b;
+        
+        #display{
+            color: #fffeff;
+        }
+        #clear{
+            background-color: #4245ec;
+            color: #f8e8df;
+        }
+        .btn-number{
+            background-color: #5fff67;
+            color:black;
+            font-weight: 600;
+        }
+        .btn-equal{
+            background-color: #fc5555;
+            color: #fff;
+        }
+
+    }
+}
+
+.theme-toggler{
+    
+    position: absolute;
+    top:30;
+    right:30px;
+    color:#ff9249;
+    cursor:pointer;
+    z-index: 1;
+    &::before{
+        content: '☀️';
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        top:50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #f13e3e;
+        z-index: -1;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    &.active::before{
+         content: '🌙';
+         background-color: #251e25;
+         display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.theme-toggler .active{
+    
+    color: #29201b;
+   
+    &::before{
+        
+        background-color: #fffeff;
+    }
+}
+button{
+    
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30%;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
