@@ -1,7 +1,6 @@
 /.idx
 /.vscode
-gitignore
-.firebase-debug-log
-.index.html
-.main.js
-.style.css
+firebase-debug-log
+index.html
+main.js
+style.css
